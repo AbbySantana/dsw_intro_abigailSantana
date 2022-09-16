@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title></title>
+<title>Fecha y Hora</title>
 </head>
 <body>
 <table class="default">
