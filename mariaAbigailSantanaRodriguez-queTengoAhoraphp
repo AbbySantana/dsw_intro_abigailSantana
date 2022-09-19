@@ -1,0 +1,15 @@
+<?php
+
+$horario = [
+    "Lunes" => [array("Primera" => "EMR", "Docente" => "Maria del Sol García Tarajano", "Aula" => "G201"),
+                    array("Segunda" => "DSW", "Docente" => "Sergio Ramos Suarez", "Aula" => "G201"),
+                        array("Tercera"=>"DSW", "Docente" => "Sergio Ramos Suarez", "Aula" => "G201"),
+                            array("Cuarta" => "DEW", "Docente" => "Maria del Carmen Rodríguez Suárez", "Aula" => "G201"),
+                                array("Quinta" => "DEW", "Docente" => "Maria del Carmen Rodríguez Suárez", "Aula" => "G201"),
+                                    array("Sexta" => "DEW", "Docente" => "Maria del Carmen Rodríguez Suárez", "Aula" => "G201")]
+
+    
+];
+
+print_r($horario);
+
