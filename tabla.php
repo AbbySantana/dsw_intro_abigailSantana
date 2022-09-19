@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 
-   
+<title>Actividad de Fecha y Hora</title>
 
   <body>
-  <title>Actividad de Fecha y Hora</title>
+  
     <table border="3">
 
     <tr>
