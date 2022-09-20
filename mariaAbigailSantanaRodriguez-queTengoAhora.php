@@ -1,51 +1,78 @@
 <?php
-
+//Elaboración de una tabla para el horario
 $horario = [
-    "Lunes" => [array("Primera" => "EMR", "Docente" => "Maria del Sol García Tarajano", "Aula" => "G201"),
-                array("Segunda" => "DSW", "Docente" => "Sergio Ramos Suarez", "Aula" => "G201"),
-                array("Tercera"=>"DSW", "Docente" => "Sergio Ramos Suarez", "Aula" => "G201"),
-                array("Cuarta" => "DEW", "Docente" => "Maria del Carmen Rodríguez Suárez", "Aula" => "G201"),
-                array("Quinta" => "DEW", "Docente" => "Maria del Carmen Rodríguez Suárez", "Aula" => "G201"),
-                array("Sexta" => "DEW", "Docente" => "Maria del Carmen Rodríguez Suárez", "Aula" => "G201")],
-                 "<br>",
+    "Lunes" => ["Primera" => ["EMR", "Docente" => "Maria del Sol García Tarajano", "Aula" => "G201"],
+                "Segunda" => ["DSW", "Docente" => "Sergio Ramos Suarez", "Aula" => "G201"],
+                "Tercera"=>["DSW", "Docente" => "Sergio Ramos Suarez", "Aula" => "G201"],
+                "Cuarta" => ["DEW", "Docente" => "Maria del Carmen Rodríguez Suárez", "Aula" => "G201"],
+                "Quinta" => ["DEW", "Docente" => "Maria del Carmen Rodríguez Suárez", "Aula" => "G201"],
+                "Sexta" => ["DEW", "Docente" => "Maria del Carmen Rodríguez Suárez", "Aula" => "G201"]],
 
-    "Martes" => [array("Primera" => "DPL", "Docente" => "María Antonia Montesdeoca Viera", "Aula" => "G201"),
-                array("Segunda" => "DPL", "Docente" => "María Antonia Montesdeoca Viera", "Aula" => "G201"),
-                array("Tercera"=>"DSW", "Docente" => "Sergio Ramos Suarez", "Aula" => "G201"),
-                array("Cuarta" =>"DSW", "Docente" => "Sergio Ramos Suarez", "Aula" => "G201"),
-                array("Quinta" => "DOR", "Docente" => "Ermís Papakinstantinouu Báez", "Aula" => "G201"),
-                array("Sexta" =>"DOR", "Docente" => "Ermís Papakinstantinouu Báez", "Aula" => "G201")], 
-                "<br>", 
+    "Martes" => ["Primera" => ["DPL", "Docente" => "María Antonia Montesdeoca Viera", "Aula" => "G201"],
+                "Segunda" => ["DPL", "Docente" => "María Antonia Montesdeoca Viera", "Aula" => "G201"],
+                "Tercera"=>["DSW", "Docente" => "Sergio Ramos Suarez", "Aula" => "G201"],
+                "Cuarta" =>["DSW", "Docente" => "Sergio Ramos Suarez", "Aula" => "G201"],
+                "Quinta" => ["DOR", "Docente" => "Ermís Papakinstantinouu Báez", "Aula" => "G201"],
+                "Sexta" =>["DOR", "Docente" => "Ermís Papakinstantinouu Báez", "Aula" => "G201"]],
+                 
 
-    "Miércoles" => [array("Primera" =>"DEW", "Docente" => "Maria del Carmen Rodríguez Suárez", "Aula" => "G201"),
-                array("Segunda" =>"DEW", "Docente" => "Maria del Carmen Rodríguez Suárez", "Aula" => "G201"),
-                array("Tercera"=>"DSW", "Docente" => "Sergio Ramos Suarez", "Aula" => "G201"),
-                array("Cuarta" =>"DSW", "Docente" => "Sergio Ramos Suarez", "Aula" => "G201"),
-                array("Quinta" => "DOR", "Docente" => "Ermís Papakinstantinouu Báez", "Aula" => "G201"),
-                array("Sexta" =>"DOR", "Docente" => "Ermís Papakinstantinouu Báez", "Aula" => "G201")],      
-                "<br>",
+    "Miércoles" => ["Primera" =>["DEW", "Docente" => "Maria del Carmen Rodríguez Suárez", "Aula" => "G201"],
+                "Segunda" =>["DEW", "Docente" => "Maria del Carmen Rodríguez Suárez", "Aula" => "G201"],
+                "Tercera"=>["DSW", "Docente" => "Sergio Ramos Suarez", "Aula" => "G201"],
+                "Cuarta" =>["DSW", "Docente" => "Sergio Ramos Suarez", "Aula" => "G201"],
+                "Quinta" => ["DOR", "Docente" => "Ermís Papakinstantinouu Báez", "Aula" => "G201"],
+                "Sexta" =>["DOR", "Docente" => "Ermís Papakinstantinouu Báez", "Aula" => "G201"]],     
+                
 
-    "Jueves" => [array("Primera" =>"DPL", "Docente" => "María Antonia Montesdeoca Viera", "Aula" => "G201"),
-                array("Segunda" =>"DPL", "Docente" => "María Antonia Montesdeoca Viera", "Aula" => "G201"),
-                array("Tercera"=>"DPL", "Docente" => "María Antonia Montesdeoca Viera", "Aula" => "G201"),
-                array("Cuarta" =>"DEW", "Docente" => "Maria del Carmen Rodríguez Suárez", "Aula" => "G201"),
-                array("Quinta" => "DEW", "Docente" => "Maria del Carmen Rodríguez Suárez", "Aula" => "G201"),
-                array("Sexta" =>"EMR", "Docente" => "Maria del Sol García Tarajano", "Aula" => "G201")],  
-                "<br>",
+    "Jueves" => ["Primera" =>["DPL", "Docente" => "María Antonia Montesdeoca Viera", "Aula" => "G201"],
+                "Segunda" =>["DPL", "Docente" => "María Antonia Montesdeoca Viera", "Aula" => "G201"],
+                "Tercera"=>["DPL", "Docente" => "María Antonia Montesdeoca Viera", "Aula" => "G201"],
+                "Cuarta" =>["DEW", "Docente" => "Maria del Carmen Rodríguez Suárez", "Aula" => "G201"],
+                "Quinta" => ["DEW", "Docente" => "Maria del Carmen Rodríguez Suárez", "Aula" => "G201"],
+                "Sexta" =>["EMR", "Docente" => "Maria del Sol García Tarajano", "Aula" => "G201"]], 
+                
                      
 
-    "Viernes" => [array("Primera" =>"DOR", "Docente" => "Ermís Papakinstantinouu Báez", "Aula" => "G201"),
-                array("Segunda" =>"DOR", "Docente" => "Ermís Papakinstantinouu Báez", "Aula" => "G201"),
-                array("Tercera"=>"DPL", "Docente" => "María Antonia Montesdeoca Viera", "Aula" => "G201"),
-                array("Cuarta" => "EMR", "Docente" => "Maria del Sol García Tarajano", "Aula" => "G201"),
-                array("Quinta" =>"DSW", "Docente" => "Sergio Ramos Suarez", "Aula" => "G201"),
-                array("Sexta" =>"DSW", "Docente" => "Sergio Ramos Suarez", "Aula" => "G201")]    
+    "Viernes" => ["Primera" =>["DOR", "Docente" => "Ermís Papakinstantinouu Báez", "Aula" => "G201"],
+                "Segunda" =>["DOR", "Docente" => "Ermís Papakinstantinouu Báez", "Aula" => "G201"],
+                "Tercera"=>["DPL", "Docente" => "María Antonia Montesdeoca Viera", "Aula" => "G201"],
+                "Cuarta" => ["EMR", "Docente" => "Maria del Sol García Tarajano", "Aula" => "G201"],
+                "Quinta" =>["DSW", "Docente" => "Sergio Ramos Suarez", "Aula" => "G201"],
+                "Sexta" =>["DSW", "Docente" => "Sergio Ramos Suarez", "Aula" => "G201"]]    
 
 
 ];
 
+foreach($horario as $clave=> $valor){
+    echo"<br>$clave<br>";
+    
+        foreach ($valor as $clave1 => $valor1) {
+            echo "<br>$clave1<br>";
+            echo "<br>";
 
-print_r($horario);
+            foreach ($valor1 as $clave2 => $valor2) {
+                echo "$valor2";
+                echo "<br>";
+            
+            }
+        }
+}
+
+
+
+
+// Función para asociar una hora con la asignatura.
+
+function queTocaAhora($dia, $hora, $minutos){
+
+   
+
+}
+
+
+
+
+
 
 
 
