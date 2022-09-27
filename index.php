@@ -7,7 +7,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='estilos.css'>
     <script src='main.js'></script>
 </head>
 
@@ -15,24 +15,58 @@
     <table style="width:100%">
         <?php
         include "funciones.php";
-
-       
-        echo "<tr>";
-        foreach ($horario as $clave => $valor) {
-            echo "<td>" . $clave;
-
-
-            foreach ($valor as $clave1 => $valor1) {
-                echo "<br>" . $clave1;
-
-
-                foreach ($valor1 as $clave2 => $valor2) {
-                    echo "<br>" . $valor2;
-                }
-            }
-            echo "</td>";
+        echo "<tr>"; 
+        foreach ($diasDeLaSemana as $dia) {
+            echo "<th>" . $dia . "</th>";
         }
-        echo "</tr>";
+        echo "</tr>"; 
+        for ($i=0; $i <6 ; $i++) { 
+            echo "<tr>"; 
+            echo "<td>";
+           
+                foreach ($lunes[$i] as $key => $value) {
+                    echo $value . "<br>";
+                }
+               
+            
+            echo "</td>"; 
+            echo "<td>";
+           
+                foreach ($martes[$i] as $key => $value) {
+                    echo $value . "<br>";
+                }
+                
+            echo "</td>"; 
+            echo "<td>";
+           
+                foreach ($miercoles[$i] as $key => $value) {
+                    echo $value . "<br>";
+                }
+               
+            
+            echo "</td>"; 
+            echo "<td>";
+           
+                foreach ($jueves[$i] as $key => $value) {
+                    echo $value . "<br>";
+                }
+               
+            
+            echo "</td>"; 
+            echo "<td>";
+           
+                foreach ($viernes[$i] as $key => $value) {
+                    echo $value . "<br>";
+                }
+               
+            
+            echo "</td>";
+
+
+
+            echo "</tr>"; 
+        }
+        
 
         echo "</table>";
 
