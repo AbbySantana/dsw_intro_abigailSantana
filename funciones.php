@@ -1,7 +1,7 @@
 <?php
 //Elaboración de una tabla para el horario
 
-$diasDeLaSemana = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes"];
+$diasDeLaSemana = ["Lunes", "Martes", "miercoles", "Jueves", "Viernes"];
 
 $lunes = [
     ["Asignatura" => "EMR", "Docente" => "Maria del Sol García Tarajano", "Aula" => "G201"],
@@ -61,48 +61,73 @@ function ordenClase($hora, $minutos)
 
     $horaTotal = ($hora * 100) + $minutos;
 
-    if ($horaTotal >= 800 && $horaTotal <= 854) {
-        return "Primera";
+    if ($horaTotal >= 900 && $horaTotal <= 954) {
+        return 0;
     }
 
-    if ($horaTotal >= 855 && $horaTotal <= 949) {
-        return "Segunda";
+    if ($horaTotal >= 955 && $horaTotal <= 1049) {
+        return 1;
     }
 
-    if ($horaTotal >= 950 && $horaTotal <= 1044) {
-        return "Tercera";
+    if ($horaTotal >= 1050 && $horaTotal <= 1144) {
+        return 2;
     }
 
 
 
-    if ($horaTotal >= 1115 && $horaTotal <= 1209) {
-        return "Cuarta";
+    if ($horaTotal >= 1215 && $horaTotal <= 1309) {
+        return 3;
     }
 
-    if ($horaTotal >= 1210 && $horaTotal <= 1304) {
-        return "Quinta";
+    if ($horaTotal >= 1310 && $horaTotal <= 1404) {
+        return 4;
     }
 
-    if ($horaTotal >= 1305 && $horaTotal <= 1400) {
-        return "Sexta";
+    if ($horaTotal >= 1405 && $horaTotal <= 1500) {
+        return 5;
     }
 }
 
+
+
 // Función para asociar una hora con la asignatura.
 
-function queTocaAhora($dia, $hora, $minutos)
-{
+function queTocaAhora($dia, $hora, $minutos){
+    global $lunes;
+    global $miercoles;
     global $horario;
     $horaTotal = ($hora * 100) + $minutos;
+    If($dia>=1 || $dia<=5){
+            if($dia==1){
+                    $diatexto=$lunes;
+            }
+            if($dia==2){
+                $diatexto=$martes;
+            }
+            if($dia==3){
+                $diatexto=$miercoles;
+            }
+            if($dia==4){
+                $diatexto=$jueves;
 
-    if ($horaTotal <= 759 || $horaTotal >= 1401) {
+            }   
+            if($dia==5){
+            $diatexto=$viernes;
+    
+            }
+
+    }
+
+
+    if ($horaTotal <= 659 || $horaTotal >= 1301) {
         return "No hay clases";
-    } elseif ($horaTotal >= 1045 && $horaTotal <= 1114) {
-        return "ahora es el recreo";
+    } elseif ($horaTotal >= 945 && $horaTotal <= 1014) {
+        return "Recreo";
     } else {
         $orden = ordenClase($hora, $minutos);
 
 
-        return "ahora de imparte: " . $horario[$dia][$orden];
+        return "Ahora se imparte: " . $diatexto[$orden]["Asignatura"] . "<br> Docente: " . $diatexto[$orden]["Docente"] . "<br> Aula: " . $diatexto[$orden]["Aula"];
     }
 }
+

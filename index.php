@@ -71,10 +71,11 @@
         echo "</table>";
 
         echo "<br><br>";
+       
 
-
-        echo queTocaAhora("Lunes", 7, 59);
-
+        
+        echo queTocaAhora(date('N'), date('G'), date('i'));
+         
         ?>
 
 </body>
